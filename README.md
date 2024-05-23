@@ -1,9 +1,13 @@
 
 DATABASE CONNECTION CREDENTIALS:
-DB_SERVER        'localhost'
+DB_SERVER      'localhost'
 DB_USERNAME     Kwizera
 DB_PASSWORD     Kwizera@123
 DB_NAME         onlinelifecoachingservice
+
+Login Website CREDENTIALS:
+USERNAME     felixkwizera90@gmail.com
+PASSWORD     12345
 
 Explain onlinelifecoachingservice : The Online Life Coaching Service is a platform designed to facilitate the interaction between professional life coaches and individuals seeking personal development and guidance
 
