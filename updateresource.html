@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--222005550  project is called onlinelifecoachingservice -->
+<!-- created by kwizera jean felix  on 5/5/2024 in huye cumpuss-->
+<!-- college business department business information and technology -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Update Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>resource Update Form</h2>
+    <form id="resourceForm" action="updateresourceform.php" method="POST">
+
+        <label for="ResourceID">ResourceID:</label><br>
+        <input type="number" id="ResourceID" name="ResourceID" required><br>
+        
+        <label for="Title">Title:</label><br>
+        <input type="text" id="Title" name="Title" required><br>
+        
+        <label for="Type">Type :</label><br>
+        <input type="number" id="Type" name="Type" required><br>
+
+        <label for="Description">Description:</label><br>
+        <input type="text" id="Description" name="Description" required><br>
+        
+        <label for="Link">Link:</label><br>
+        <input type="text" id="Link" name="Link" required><br>
+
+        <label for="CoachID">CoachID:</label><br>
+        <input type="number" id="CoachID" name="CoachID" required><br>
+        <br>
+        <input type="submit" value="update" class="btn">
+    </form>
+
+    <script>
+        document.getElementById('resourceForm').addEventListener('submit', function(event) {
+            // ValiDescription the form fields before submission
+            var ResourceID = document.getElementById('ResourceID').value;
+            var Title = document.getElementById('Title').value;
+            var Type  = document.getElementById('Type').value;
+            var Description = document.getElementById('Description').value;
+            var Link = document.getElementById('Link').value;
+            var CoachID = document.getElementById('CoachID').value;
+            
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!Title || !Type  || !Description || !Link|| !CoachID) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
