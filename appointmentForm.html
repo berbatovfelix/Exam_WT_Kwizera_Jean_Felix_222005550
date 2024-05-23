@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--222005550  project is called onlinelifecoachingservice -->
+<!-- created by kwizera jean felix  on 5/5/2024 in huye cumpuss-->
+<!-- college business department business information and technology -->
+<!-- show appointment registration -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appointment Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>appointment Registration Form</h2>
+    <form id="appointmentForm" action="appointmentform.php" method="POST">
+        
+        <label for="CoachID">CoachID:</label><br>
+        <input type="number" id="CoachID" name="CoachID" required><br>
+        
+        <label for="ClientID ">ClientID :</label><br>
+        <input type="number" id="ClientID" name="ClientID" required><br>
+
+        <label for="Date">Date:</label><br>
+        <input type="date" id="Date" name="Date" required><br>
+        
+        <label for="Status">Status:</label><br>
+         <select id="Status" name="Status">
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Canceled">Canceled</option>
+                                    
+                                </select><br>
+
+        
+        
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+            // Validate the form fields before submission
+            var CoachID = document.getElementById('CoachID').value;
+            var ClientID  = document.getElementById('ClientID ').value;
+            var Date = document.getElementById('Date').value;
+            var Status = document.getElementById('Status').value;
+            var issuerName = document.getElementById('IssuerName').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!CoachID || !ClientID  || !Date || !Status) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
+//kwizera jean felix 222005550
