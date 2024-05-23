@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--222005550  project is called onlinelifecoachingservice -->
+<!-- created by kwizera jean felix  on 5/5/2024 in huye cumpuss-->
+<!-- college business department business information and technology -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment Update Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>payment Update Form</h2>
+    <form id="paymentForm" action="updatepaymentform.php" method="POST">
+        <label for="PaymentID">PaymentID:</label><br>
+        <input type="number" id="PaymentID" name="PaymentID" required><br>
+        
+        <label for="UserID">UserID:</label><br>
+        <input type="number" id="UserID" name="UserID" required><br>
+        
+        <label for="a">Amount :</label><br>
+        <input type="text" id="Amount" name="Amount" required><br>
+
+        <label for="PaymentDate">PaymentDate:</label><br>
+        <input type="date" id="PaymentDate" name="PaymentDate" required><br>
+        <br>
+        <input type="submit" value="update" class="btn">
+    </form>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            // ValiPaymentDate the form fields before submission
+            var PaymentID = document.getElementById('PaymentID').value;
+            var UserID = document.getElementById('UserID').value;
+            var Amount  = document.getElementById('Amount ').value;
+            var PaymentDate = document.getElementById('PaymentDate').value;
+           
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!UserID || !Amount  || !PaymentDate) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

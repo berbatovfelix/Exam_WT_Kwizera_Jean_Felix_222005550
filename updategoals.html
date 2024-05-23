@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--222005550  project is called onlinelifecoachingservice -->
+<!-- created by kwizera jean felix  on 5/5/2024 in huye cumpuss-->
+<!-- college business department business information and technology -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goals Update Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>goals Update Form</h2>
+    <form id="goalsForm" action="updategoalsform.php" method="POST">
+
+        <label for="GoalID">GoalID:</label><br>
+        <input type="number" id="GoalID" name="GoalID" required><br>
+        
+        <label for="ClientID">ClientID:</label><br>
+        <input type="number" id="ClientID" name="ClientID" required><br>
+
+        <label for="a">Description:</label><br>
+        <input type="text" id="Description" name="Description" required><br>
+        
+        <label for="TargetCompletionDate">TargetCompletionDate:</label><br>
+        <input type="date" id="TargetCompletionDate" name="TargetCompletionDate" required><br>
+
+        <label for="ProgressStatus">ProgressStatus:</label><br>
+        <input type="text" id="ProgressStatus" name="ProgressStatus" required><br>
+        <br>
+        <input type="submit" value="update" class="btn">
+    </form>
+
+    <script>
+        document.getElementById('goalsForm').addEventListener('submit', function(event) {
+            // ValiDescription the form fields before submission
+            var GoalID = document.getElementById('GoalID').value;
+            var ClientID = document.getElementById('ClientID').value;
+            var Description = document.getElementById('Description').value;
+            var TargetCompletionDate = document.getElementById('TargetCompletionDate').value;
+            var ProgressStatus = document.getElementById('ProgressStatus').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!ClientID || !ClientID  || !Description || !TargetCompletionDate) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
