@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--222005550  project is called onlinelifecoachingservice -->
+<!-- created by kwizera jean felix  on 5/5/2024 in huye cumpuss-->
+<!-- college business department business information and technology -->
+<!-- coaches form -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coaches Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>coaches Registration Form</h2>
+    <form id="coachesForm" action="coachesform.php" method="POST">
+        
+        <label for="UserID">UserID:</label><br>
+        <input type="number" id="UserID" name="UserID" required><br>
+        
+        <label for="Bio">Bio :</label><br>
+        <input type="text" id="Bio" name="Bio" required><br>
+
+        <label for="Specialization">Specialization:</label><br>
+        <input type="text" id="Specialization" name="Specialization" required><br>
+        
+        <label for="Availability">Availability:</label><br>
+        <input type="text" id="Availability" name="Availability" required><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('coachesForm').addEventListener('submit', function(event) {
+            // ValiSpecialization the form fields before submission
+            var UserID = document.getElementById('UserID').value;
+            var Bio  = document.getElementById('Bio ').value;
+            var Specialization = document.getElementById('Specialization').value;
+            var Availability = document.getElementById('Availability').value;
+            
+//kwizera jean felix 222005550
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!UserID || !Bio  || !Specialization || !Availability) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
